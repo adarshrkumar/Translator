@@ -1,0 +1,33 @@
+:root {
+  --margin: 8px;
+  font-family: Arial;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: calc(100% - calc(var(--margin) * 2));
+  width: calc(100% - calc(var(--margin) * 2));
+  margin: var(--margin);
+}
+
+body[show] {
+  --margin: 0;
+  height: 100%;
+}
+
+body > iframe {
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+
+body[show] > p {
+  text-align: center;
+  margin-block: 0;
+  font-size: 24pt;
+  padding: 1em;
+}
